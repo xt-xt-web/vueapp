@@ -2,7 +2,7 @@
 	<div>
 		<!--最上部分-->
 		<div class="topmenutop">
-			<img class="log" src="../assets/OBJlogo.png"/>
+			<img class="log" src="../assets/logo1.png"/>
 			<el-menu 
 				:default-active="activeIndex" 
 				class="el-menu-demo" 
