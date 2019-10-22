@@ -9,6 +9,7 @@ import axios from 'axios'
 
 
 import TopMenu from '@/components/TopMenu.vue'
+import PublicBottom from '@/components/PublicBottom.vue'
 
 Vue.use(ElementUI);
 //定义全局的请求
@@ -19,6 +20,7 @@ Vue.prototype.axios=axios;
 Vue.config.productionTip = false
 
 Vue.component('top-menu',TopMenu)
+Vue.component('public-bottom',PublicBottom)
 
 new Vue({
   router,

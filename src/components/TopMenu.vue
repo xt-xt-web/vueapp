@@ -1,7 +1,8 @@
 <template>
 	<div>
+		<!--最上部分-->
 		<div class="topmenutop">
-			<img class="log" src="http://www.mhealthchina.org/wp-content/uploads/2018/11/2018111914550525.png"/>
+			<img class="log" src="../assets/OBJlogo.png"/>
 			<el-menu 
 				:default-active="activeIndex" 
 				class="el-menu-demo" 
@@ -18,16 +19,17 @@
 			  </el-submenu>
 			  <div class="inputbox">
 					<input class="sous" type="text" name="" id="sous"  />
-					<label class="label1" for="sous">搜索</label>
+					<label class="label1 el-icon-zoom-in" for="sous"></label>
 				</div>
 			  <el-submenu class='loginbox' index="5">
 					<template slot="title">用户</template>
 					<el-menu-item index="5-1"><router-link to='/login'>登陆</router-link></el-menu-item>
-					<el-menu-item index="5-2"><router-link to='/loginreg'>注册</router-link></el-menu-item>
+					<el-menu-item index="5-2"><router-link to='/reg'>注册</router-link></el-menu-item>
 				</el-submenu>
 			</el-menu>
 			<!--<div class="falselogin" @click="falselogin">退出登陆</div>-->
 		</div>
+		<!--蓝色导航栏部分-->
 		<div>
 			<el-menu
 			  class="el-menu-demo topmenubutton"
@@ -54,8 +56,6 @@
 
 
 <style>
-
-
 	/*最上部导航*/
 	.log {
 		width: 150px;
@@ -101,6 +101,7 @@
 		height: 100px;
 		/*border: 1px solid red;*/
 		line-height: 100px;
+		font-size: 30px;
 	}
 	.sous {
 		width: 180px;
@@ -110,9 +111,10 @@
 	.label1 {
 		position: absolute;
 		right: 45px;
-		top: 2px;
-		/*background-color: royalblue;*/
-		color: royalblue;
+		top: 43px;
+		background-color: royalblue;
+		color: white;
+		cursor: pointer;
 	}
 	/*二级菜单*/
 	.el-menu--horizontal>.el-submenu .el-submenu__title {

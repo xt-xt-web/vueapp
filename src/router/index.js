@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import LoginReg from '../views/LoginReg.vue'
-
+import Login from '../views/Login.vue'
+import Reg from '../views/reg.vue'
 
 
 
@@ -15,8 +15,12 @@ const routes = [
     component: Home
   },
   {
-    path: '/loginreg',
-    component:  LoginReg
+    path: '/login',
+    component:  Login
+  },
+  {
+    path: '/reg',
+    component:  Reg
   },
   {
     path: '/about',
