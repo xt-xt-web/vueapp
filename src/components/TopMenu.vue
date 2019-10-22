@@ -8,20 +8,20 @@
 				class="el-menu-demo" 
 				mode="horizontal" 
 				@select="handleSelect">
-			  <el-menu-item index="1">首页</el-menu-item>
-			  <el-menu-item index="2">资讯</el-menu-item>
-			  <el-menu-item index="3">观点</el-menu-item>
-			  <el-submenu index="4">
-			    <template slot="title">活动</template>
-			    <el-menu-item index="4-1">选项1</el-menu-item>
-			    <el-menu-item index="4-2">选项2</el-menu-item>
-			    <el-menu-item index="4-3">选项3</el-menu-item>
-			  </el-submenu>
-			  <div class="inputbox">
+			  	<el-menu-item index="1">首页</el-menu-item>
+			  	<el-menu-item index="2">资讯</el-menu-item>
+			  	<el-menu-item index="3">观点</el-menu-item>
+			  	<el-submenu index="4">
+				    <template slot="title">活动</template>
+				    <el-menu-item index="4-1">选项1</el-menu-item>
+				    <el-menu-item index="4-2">选项2</el-menu-item>
+				    <el-menu-item index="4-3">选项3</el-menu-item>
+			  	</el-submenu>
+			  	<div class="inputbox">
 					<input class="sous" type="text" name="" id="sous"  />
 					<label class="label1 el-icon-zoom-in" for="sous"></label>
 				</div>
-			  <el-submenu class='loginbox' index="5">
+			    <el-submenu class='loginbox' index="5">
 					<template slot="title">用户</template>
 					<el-menu-item index="5-1"><router-link to='/login'>登陆</router-link></el-menu-item>
 					<el-menu-item index="5-2"><router-link to='/reg'>注册</router-link></el-menu-item>
@@ -76,6 +76,7 @@
 		width: 91%;
 		background-color:white !important;
 		color: red !important;
+		position: relative;
 	}
 	.el-menu--horizontal>.el-menu-item {
 		height: 100px;
@@ -92,10 +93,12 @@
 	.loginbox {
 		position: absolute;
 		right: 0;
+		top: 0;
 	}
 	/*搜索框*/
 	.inputbox {
 		position: absolute;
+		top: 0;
 		right: 120px;
 		width: 220px;
 		height: 100px;
