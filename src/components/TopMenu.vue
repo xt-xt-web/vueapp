@@ -17,8 +17,10 @@
 				    <el-menu-item index="4-2">选项2</el-menu-item>
 				    <el-menu-item index="4-3">选项3</el-menu-item>
 			  	</el-submenu>
+			  	
 			  	<div class="inputbox">
-					<input class="sous" type="text" name="" id="sous"  />
+			  		<el-input v-model="input" id="sous" placeholder="请输入内容"></el-input>
+					<!--<input class="sous" type="text" name="" id="sous"  />-->
 					<label class="label1 el-icon-zoom-in" for="sous"></label>
 				</div>
 			    <el-submenu class='loginbox' index="5">
@@ -98,23 +100,23 @@
 	/*搜索框*/
 	.inputbox {
 		position: absolute;
-		top: 0;
+		top: 25px;
 		right: 120px;
 		width: 220px;
-		height: 100px;
+		height: 30px;
 		/*border: 1px solid red;*/
-		line-height: 100px;
+		/*line-height: 100px;*/
 		font-size: 30px;
 	}
-	.sous {
+	/*.sous {
 		width: 180px;
 		height: 30px;
 		border: 1px solid blueviolet;
-	}
+	}*/
 	.label1 {
 		position: absolute;
-		right: 45px;
-		top: 43px;
+		right: 10px;
+		top: 12px;
 		background-color: royalblue;
 		color: white;
 		cursor: pointer;
@@ -184,7 +186,8 @@
 			return {
 				//默认页面是否有样式（显示的页面，路由不变）
 				activeIndex: '1',
-				activeIndex2:'1'
+				activeIndex2:'1',
+				input:''
 			};
 		},
 		//用于保存登陆之后的状态，
