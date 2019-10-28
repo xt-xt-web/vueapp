@@ -8,7 +8,10 @@
 				</el-carousel-item>
 			</el-carousel>
 		</div>	-->
+		
+		
 		<public-bottom></public-bottom>
+
 	</div>
 </template>
 

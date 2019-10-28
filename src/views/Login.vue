@@ -98,8 +98,7 @@
 				ruleForm: {
 					name: '',
 					password:'',
-					delivery: false,
-					
+					delivery: false
 				},
 				//这是父
 				rules: {
@@ -139,10 +138,13 @@
 						})
 						.then((response)=>{
 							if(response.data.status==1){
+								
 								this.$router.push({path:'/'})
+								
 							}else {
 								this.$message(`${response.data.msg}`)
 							}
+
 						})
 						.catch(function (error){
 							console.log(error)

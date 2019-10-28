@@ -24,12 +24,13 @@
 					<label class="label1 el-icon-zoom-in" for="sous"></label>
 				</div>
 			    <el-submenu class='loginbox' index="5">
-					<template slot="title">用户</template>
+					<template slot="title">{{username}}</template>
 					<el-menu-item index="5-1"><router-link to='/login'>登陆</router-link></el-menu-item>
 					<el-menu-item index="5-2"><router-link to='/reg'>注册</router-link></el-menu-item>
 				</el-submenu>
+				<div class="falselogin" @click="falselogin">退出登陆</div>
 			</el-menu>
-			<!--<div class="falselogin" @click="falselogin">退出登陆</div>-->
+			
 		</div>
 		<!--蓝色导航栏部分-->
 		<div>
@@ -171,10 +172,12 @@
 	/*退出登陆按钮样式*/
 	.falselogin {
 		display: inline-block;
+		display: none;
+		color: black;
 		width: 100px;
 		height: 60px;
 		position: absolute;
-		top: 0;
+		top: 20px;
 		right: 0;
 		line-height: 60px;
 		text-align: center;
@@ -187,14 +190,16 @@
 				//默认页面是否有样式（显示的页面，路由不变）
 				activeIndex: '1',
 				activeIndex2:'1',
-				input:''
-			};
+				input:'',
+				username:'用户'
+			}
 		},
 		//用于保存登陆之后的状态，
 		computed: {
 			info: function() {
 				return this.$store.state.loginstate
 			}
+			
 		},
 		methods: {
 			handleSelect(key, keyPath) {
